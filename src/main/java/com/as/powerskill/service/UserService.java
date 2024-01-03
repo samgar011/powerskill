@@ -14,16 +14,11 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-/**
- * @author Abdurrahman Samgar
- */
 @Service
 @RequiredArgsConstructor
-public class UserServiceImpl {
-
+public class UserService {
 
     private final UserRepository userRepository;
-
 
 
     public void createUser(UserRequestDto userRequestDto, Integer suffix) {
@@ -55,7 +50,6 @@ public class UserServiceImpl {
     }
 
 
-
     @Transactional(readOnly = true)
     public List<UserDetailResponsetDto> getAllUsers() {
         List<User> users = userRepository.findAll();
@@ -73,8 +67,4 @@ public class UserServiceImpl {
                 ))
                 .collect(Collectors.toList());
     }
-
-    public void updateUser(UserRequestDto userRequestDto) {
-    }
-
 }

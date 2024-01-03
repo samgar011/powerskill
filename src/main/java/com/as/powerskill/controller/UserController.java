@@ -3,7 +3,7 @@ package com.as.powerskill.controller;
 import com.as.powerskill.dto.request.UserRequestDto;
 import com.as.powerskill.dto.response.BooleanResponse;
 import com.as.powerskill.dto.response.UserDetailResponsetDto;
-import com.as.powerskill.service.UserServiceImpl;
+import com.as.powerskill.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +22,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserController {
 
-    private final UserServiceImpl userService;
+    private final UserService userService;
 
     @PostMapping
     public BooleanResponse createUser(@RequestBody UserRequestDto userRequestDto, Integer suffix) {
@@ -36,9 +36,5 @@ public class UserController {
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
 
-    @PutMapping
-    public BooleanResponse updateUser(@RequestBody UserRequestDto userRequestDto) {
-        userService.updateUser(userRequestDto);
-        return BooleanResponse.success();
-    }
+
 }
