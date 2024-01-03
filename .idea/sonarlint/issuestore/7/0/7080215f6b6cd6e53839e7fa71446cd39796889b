@@ -1,0 +1,7 @@
+
+£
+java:S1186M"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÔôäÀûÿÿÿÿ8ÚØØÜÇ1
+O
+java:S1172"-Remove this unused method parameter "suffix".(Öö×‡şÿÿÿÿ8ƒ“¨ûÆ1
+o
+java:S6204J"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8ÖˆûÆ1
