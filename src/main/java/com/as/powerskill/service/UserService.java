@@ -4,7 +4,7 @@ import com.as.powerskill.dto.request.UserRequestDto;
 import com.as.powerskill.dto.request.UserRequestUpdateDto;
 import com.as.powerskill.dto.response.UserDetailResponsetDto;
 import com.as.powerskill.model.entity.enums.Title;
-import com.as.powerskill.model.User;
+import com.as.powerskill.model.entity.user.User;
 import com.as.powerskill.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

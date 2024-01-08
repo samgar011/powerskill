@@ -1,4 +1,4 @@
-package com.as.powerskill.model;
+package com.as.powerskill.model.entity.user;
 
 import com.as.powerskill.model.entity.EntityConstanUtil;
 import com.as.powerskill.model.entity.enums.Title;
