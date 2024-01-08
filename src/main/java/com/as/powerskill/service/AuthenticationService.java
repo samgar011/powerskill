@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author Abdurrahman Samgar
  */
 public class AuthenticationService {
-    private static final String AUTH_TOKEN_HEADER_NAME = "X-API-KEY";
+    private static final String AUTH_TOKEN_HEADER_NAME = "TOKEN-API-KEY";
     private static final String AUTH_TOKEN = "Bearer";
 
     public static Authentication getAuthentication(HttpServletRequest request) {
