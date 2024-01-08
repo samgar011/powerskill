@@ -1,6 +1,7 @@
 package com.as.powerskill.service;
 
 import com.as.powerskill.dto.request.UserRequestDto;
+import com.as.powerskill.dto.request.UserRequestUpdateDto;
 import com.as.powerskill.dto.response.UserDetailResponsetDto;
 import com.as.powerskill.model.entity.enums.Title;
 import com.as.powerskill.model.entity.user.User;
@@ -49,7 +50,6 @@ public class UserService {
         );
     }
 
-
     @Transactional(readOnly = true)
     public List<UserDetailResponsetDto> getAllUsers() {
         List<User> users = userRepository.findAll();
@@ -67,4 +67,31 @@ public class UserService {
                 ))
                 .collect(Collectors.toList());
     }
+
+
+    public void updateUser(Long id, UserRequestUpdateDto userRequestDto) {
+        Optional<User> userOptional = userRepository.findById(id);
+        if (userOptional.isPresent()) {
+            User existingUser = userOptional.get();
+
+            if (userRequestDto.getEmail() != null) {
+                existingUser.setEmail(userRequestDto.getEmail());
+            }
+            if (userRequestDto.getUserName() != null) {
+                existingUser.setUserName(userRequestDto.getUserName());
+            }
+
+            if (userRequestDto.getPassword() != null) {
+                existingUser.setPassword(userRequestDto.getPassword());
+            }
+            if (userRequestDto.getBio() != null) {
+                existingUser.setBio(userRequestDto.getBio());
+            }
+            if (userRequestDto.getContactNumber() != null) {
+                existingUser.setContactNumber(userRequestDto.getContactNumber());
+            }
+            userRepository.saveAndFlush(existingUser);
+        }
+    }
+
 }
