@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+.idea/sonarlint/issuestore/7/0/7080215f6b6cd6e53839e7fa71446cd39796889b
+*.pb
+*.pb
