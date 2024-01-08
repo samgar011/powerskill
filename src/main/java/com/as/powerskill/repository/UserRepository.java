@@ -1,6 +1,6 @@
 package com.as.powerskill.repository;
 
-import com.as.powerskill.model.entity.user.User;
+import com.as.powerskill.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
